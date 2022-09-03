@@ -1,9 +1,44 @@
+// estilos nav de bootstrap
+
 nav {
-    height: 70px !important;
+    height: 90px !important;
     font-size: 25px !important;
     justify-content: center !important;
     .logo {
         height: 40px !important;
         width: 40px !important;
     }
+}
+
+// mixin para estilos de logos de redes sociales
+
+@mixin size ($alto, $ancho, $espacio) {
+    height: $alto;
+    width: $ancho;
+    margin: $espacio;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .redes {
+        i {
+            size: 100px;
+            text-decoration: none;
+            margin: 20px;
+        }
+    }
+
 }
