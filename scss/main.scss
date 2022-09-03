@@ -1,3 +1,14 @@
+$ancho: 100%; 
+
+// mixin para estilos de logos de redes sociales
+
+@mixin size ($alto, $ancho, $espacio) {
+    height: $alto;
+    width: $ancho;
+    margin: $espacio;
+}
+
+
 // estilos nav de bootstrap
 
 nav {
@@ -10,16 +21,17 @@ nav {
     }
 }
 
-// mixin para estilos de logos de redes sociales
-
-@mixin size ($alto, $ancho, $espacio) {
-    height: $alto;
-    width: $ancho;
-    margin: $espacio;
+// estilos productos shop
+.card {
+    img {
+        @include size (50vh, 19.9vw, 0px)
+    }
 }
 
+
+
 footer {
-    width: 100%;
+    width: $ancho;
     height: 30vh;
     background-color: #000000;
     color: #ffffff;
