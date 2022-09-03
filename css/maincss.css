@@ -6,10 +6,41 @@ nav {
     height: 40px !important;
     width: 40px !important; }
 
+header {
+  text-align: center;
+  height: 10vh;
+  width: 100vw;
+  margin: 20px 0px; }
+
+.productos {
+  margin: 30px 0px; }
+  .productos h2 {
+    display: inline-block;
+    height: 50px;
+    width: 20px;
+    margin: 20px; }
+
 .card img {
   height: 50vh;
   width: 19.9vw;
   margin: 0px; }
+
+.about {
+  text-align: center; }
+  .about .mb-3 {
+    display: inline-block; }
+    .about .mb-3 img {
+      width: 100%;
+      object-fit: cover; }
+  .about .formulario {
+    height: 40vh;
+    width: 100vw;
+    margin: 0px;
+    background-color: #F0DBD1;
+    padding: 40px;
+    text-align: center; }
+    .about .formulario div {
+      padding: 5px; }
 
 footer {
   width: 100%;
@@ -19,9 +50,18 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 500px) {
+    footer {
+      display: block;
+      text-align: center; } }
   footer div p {
     font-size: 10px; }
-  footer .redes i {
-    size: 100px;
-    text-decoration: none;
-    margin: 20px; }
+  footer .redes {
+    order: 2; }
+    @media screen and (max-width: 500px) {
+      footer .redes {
+        margin: 30px 0px; } }
+    footer .redes i {
+      size: 100px;
+      text-decoration: none;
+      margin: 20px; }

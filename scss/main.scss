@@ -1,4 +1,5 @@
 $ancho: 100%; 
+$texto: center;
 
 // mixin para estilos de logos de redes sociales
 
@@ -21,14 +22,55 @@ nav {
     }
 }
 
+// estilos h1
+
+header {
+    text-align: $texto;
+    @include size (10vh, 100vw, 20px 0px)
+}
+
 // estilos productos shop
+
+.productos {
+    margin: 30px 0px;
+    h2{
+        display: inline-block;
+        @include size (50px, 20px, 20px)
+    }
+}
+
 .card {
     img {
         @include size (50vh, 19.9vw, 0px)
     }
 }
 
+// estilos pagina about
 
+.about {
+    text-align: center;
+    .mb-3 {
+        display: inline-block;
+        img {
+            width: $ancho;
+            object-fit: cover;
+        }
+    }
+
+    .formulario {
+        @include size(40vh, 100vw,0px);
+        background-color: #F0DBD1;
+        padding: 40px;
+        text-align: center;
+        div {
+            padding: 5px;
+        }
+    }
+}
+
+
+
+// estilos footer
 
 footer {
     width: $ancho;
@@ -39,6 +81,11 @@ footer {
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width:500px) {
+        display: block;
+        text-align: center;       
+     }
+
     div {
         p{
             font-size: 10px;
@@ -46,10 +93,14 @@ footer {
     }
 
     .redes {
+        order: 2;
+        @media screen and (max-width:500px) {
+            margin: 30px 0px;     
+         }
         i {
             size: 100px;
             text-decoration: none;
-            margin: 20px;
+            margin:20px;
         }
     }
 
