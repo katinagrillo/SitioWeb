@@ -79,22 +79,112 @@ main {
   width: 19.9vw;
   margin: 0px; }
 
-.paginaBlog div {
+.paginaBlog .blog {
   width: 100%;
   height: 100%;
   margin: 20px 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; }
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-areas: "uno noticias" "dos noticias"; }
+  .paginaBlog .blog .navegador {
+    margin: 30px; }
+  .paginaBlog .blog .blogPostUno {
+    width: 55vw;
+    padding: 25px;
+    margin: 10px; }
+    .paginaBlog .blog .blogPostUno .blogFoto {
+      width: 700px;
+      height: 410px;
+      margin: 5px;
+      object-fit: cover;
+      left: 50%;
+      justify-content: center;
+      align-items: center; }
+    .paginaBlog .blog .blogPostUno .blogTitulo {
+      color: #B68C2B;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 600; }
+    .paginaBlog .blog .blogPostUno .blogFecha {
+      color: #5c5c5c;
+      font-size: 15px;
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+    .paginaBlog .blog .blogPostUno .blogContenido {
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+    .paginaBlog .blog .blogPostUno .leer {
+      background-color: #F0DBD1;
+      color: #000000;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 15px;
+      transition: 0.5s ease; }
+    .paginaBlog .blog .blogPostUno .leer:hover {
+      background-color: #ffffff;
+      color: #000000;
+      border-style: solid;
+      border-color: #FCF7ED; }
+  .paginaBlog .blog .blogPostDos {
+    width: 55vw;
+    padding: 25px;
+    margin: 10px; }
+    .paginaBlog .blog .blogPostDos .blogFoto {
+      width: 700px;
+      height: 410px;
+      margin: 5px;
+      object-fit: cover;
+      left: 50%;
+      justify-content: center;
+      align-items: center; }
+    .paginaBlog .blog .blogPostDos .blogTitulo {
+      color: #B68C2B;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 600; }
+    .paginaBlog .blog .blogPostDos .blogFecha {
+      color: #5c5c5c;
+      font-size: 15px;
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+    .paginaBlog .blog .blogPostDos .blogContenido {
+      font-family: Georgia, 'Times New Roman', Times, serif; }
+    .paginaBlog .blog .blogPostDos .leer {
+      background-color: #F0DBD1;
+      color: #000000;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 15px;
+      transition: 0.5s ease; }
+    .paginaBlog .blog .blogPostDos .leer:hover {
+      background-color: #ffffff;
+      color: #000000;
+      border-style: solid;
+      border-color: #FCF7ED; }
+  .paginaBlog .blog .noticias {
+    height: 100%;
+    width: 25vw;
+    padding: 25px;
+    margin: 20px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #000000; }
+    .paginaBlog .blog .noticias .anuncio {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #F0DBD1;
+      margin: 15px 0px;
+      padding: 15px; }
+      .paginaBlog .blog .noticias .anuncio .botonAnuncio {
+        text-decoration: none;
+        font-size: 20px;
+        color: #000000; }
+      .paginaBlog .blog .noticias .anuncio .botonAnuncio:hover {
+        color: #B68C2B;
+        text-decoration: underline; }
+      .paginaBlog .blog .noticias .anuncio .botonAnuncio::before {
+        content: "♥ "; }
 
 .blogPostUno {
   grid-area: uno; }
 
 .blogPostDos {
   grid-area: dos; }
-
-.navegador {
-  grid-area: nave; }
 
 .noticias {
   grid-area: noticias; }
@@ -122,7 +212,7 @@ main .post {
   display: grid;
   grid-template-areas: "post noticias"; }
   main .post .postUno {
-    width: 60vw;
+    width: 55vw;
     margin: 25px; }
     main .post .postUno .fotoPost, main .post .postUno .fotos .deco {
       padding: 10px; }
@@ -142,6 +232,7 @@ main .post {
         align-items: center; }
   main .post .noticias {
     height: 100%;
+    width: 30vw;
     padding: 25px;
     margin: 20px;
     border-style: solid;

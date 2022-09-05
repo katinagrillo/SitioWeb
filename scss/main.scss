@@ -1,6 +1,7 @@
 $ancho: 100%; 
 $texto: center;
 
+
 // mixin para estilos de logos de redes sociales
 
 @mixin size ($alto, $ancho, $espacio) {
@@ -124,27 +125,151 @@ main {
 // estilos blog
 
 .paginaBlog {
-    div {
+    .blog {
         width: 100%;
         height: 100%;
         margin: 20px 0px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-       // display: grid;
+        //display: flex;
+        //justify-content: space-evenly;
+        //align-items: center;
+       display: grid;
 
-        //grid-column-gap: 10px;
+        grid-column-gap: 10px;
     
-        //grid-template-areas: 
-        //"uno noticias"
-        //"dos noticias"
-        //"nave noticias"; 
+        grid-template-areas: 
+        "uno noticias"
+        "dos noticias"; 
+
+        .navegador {
+            margin: 30px;
+        }
+
+        .blogPostUno{
+            width: 55vw;
+            padding: 25px;
+            margin: 10px;
+            .blogFoto {
+                width: 700px;
+                height: 410px;
+                margin: 5px;
+                object-fit: cover;
+                left: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            .blogTitulo {
+                color: #B68C2B;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: 600;
+            }
+            
+            .blogFecha {
+                color: #5c5c5c;
+                font-size: 15px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            .blogContenido {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            .leer {
+                background-color: #F0DBD1;
+                color: #000000;
+                text-decoration: none;
+                font-size: 20px;
+                padding: 15px;
+                transition: 0.5s ease;
+            }
+            
+            .leer:hover {
+                background-color: #ffffff;
+                color:#000000;
+                border-style: solid;
+                border-color: #FCF7ED;
+            }
+        }
+        
+        .blogPostDos {
+            width: 55vw;
+            padding: 25px;
+            margin: 10px;
+            .blogFoto {
+                width: 700px;
+                height: 410px;
+                margin: 5px;
+                object-fit: cover;
+                left: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            .blogTitulo {
+                color: #B68C2B;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: 600;
+            }
+            
+            .blogFecha {
+                color: #5c5c5c;
+                font-size: 15px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            .blogContenido {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            .leer {
+                background-color: #F0DBD1;
+                color: #000000;
+                text-decoration: none;
+                font-size: 20px;
+                padding: 15px;
+                transition: 0.5s ease;
+            }
+            
+            .leer:hover {
+                background-color: #ffffff;
+                color:#000000;
+                border-style: solid;
+                border-color: #FCF7ED;
+            }
+        }
+        
+        .noticias {
+            height: 100%;
+            width: 25vw;
+            padding: 25px;
+            margin: 20px;
+            border-style: solid;
+            border-width: 1.5px;
+            border-color: #000000;
+            .anuncio {
+                border-style: solid;
+                border-width: 1px;
+                border-color: #F0DBD1;
+                margin: 15px 0px;
+                padding: 15px;
+                .botonAnuncio {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: #000000;
+                }
+                .botonAnuncio:hover {
+                    color:#B68C2B;
+                    text-decoration: underline;
+                }
+                
+                .botonAnuncio::before {
+                    content: "♥ ";
+                }
+            }
+        }
     }
 }
 
 .blogPostUno {grid-area: uno;}
 .blogPostDos {grid-area: dos;}
-.navegador {grid-area: nave;}
 .noticias {grid-area: noticias;} 
 
 // estilos pagina about
@@ -182,7 +307,7 @@ main {
         "post noticias";
 
         .postUno {
-            width: 60vw;
+            width: 55vw;
             margin: 25px;
             
             .fotoPost {
@@ -211,6 +336,7 @@ main {
 
         .noticias {
             height: 100%;
+            width: 30vw;
             padding: 25px;
             margin: 20px;
             border-style: solid;
