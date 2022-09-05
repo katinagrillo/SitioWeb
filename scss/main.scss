@@ -37,24 +37,72 @@ header {
         height: 70vh;
         object-fit: cover;
     }
+
+    div {
+        height: 70vh; 
+        font-weight: 100;
+        font-size: 20px;
+        color: #FCF7ED;
+        background-color: #b68c2b91;
+        padding: 160px 20px;
+        top: 110px;
+        position: absolute;
+        width: $ancho;
+        text-align: center;
+
+        .CTA {
+            background-color: #B68C2B ;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px 0px;
+            text-align: center;
+            transition: 0.5s ease;
+        }
+        
+        .CTA:hover {
+            background-color: #ffffff;
+            color:#B68C2B;
+            border-style: solid;
+            border-color: #B68C2B;
+        }
+    }
 }
 
 main {
     width: $ancho;
-    height: $ancho;
+    height: 100%;
     .inicioFoto {
         height: 50vh;
         display: flex;
         justify-content: space-evenly;
+        top: 500px;
+
         div {
-            .slide {
-                height: 100px;
+            h2 {
+                text-align: center;
+                width: 100%;
+                margin-top: 3rem;
+                padding: 20px;
+                font-size: 30px;
             }
+        }
+        
+    }
+
+    .beneficios {
+        background-color: #FCF7ED;
+        width: $ancho;
+        height: 40vh !important;
+        text-align: $texto;
+
+        h3 {
+            top: 5rem;
         }
     }
 
 }
-
 
 
 // estilos productos shop
@@ -124,6 +172,19 @@ main {
     }
 }
 
+// estilos post uno
+
+main {
+    .post {
+        display: grid; 
+        grid-template-areas: 
+        "post noticias";
+    }
+
+}
+
+.post {grid-area: post;}
+    .noticias {grid-area: noticias;}
 
 // estilos footer
 
