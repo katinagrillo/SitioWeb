@@ -29,6 +29,9 @@ header div {
   position: absolute;
   width: 100%;
   text-align: center; }
+  header div h1 span {
+    font-size: medium;
+    font-style: italic; }
   header div .CTA {
     background-color: #B68C2B;
     color: #ffffff;
@@ -58,6 +61,16 @@ main {
       margin-top: 3rem;
       padding: 20px;
       font-size: 30px; }
+    main .inicioFoto .inicio {
+      width: 100%;
+      max-height: 500px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      align-content: flex-start;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-areas: "parrafo foto" "CTA foto"; }
   main .beneficios {
     background-color: #FCF7ED;
     width: 100%;
@@ -65,6 +78,15 @@ main {
     text-align: center; }
     main .beneficios h3 {
       top: 5rem; }
+
+.parrafo {
+  grid-area: parrafo; }
+
+.carousel slide {
+  grid-area: foto; }
+
+.CTA {
+  grid-area: CTA; }
 
 .productos {
   margin: 30px 0px; }
@@ -283,3 +305,9 @@ footer {
       size: 100px;
       text-decoration: none;
       margin: 20px; }
+
+@media screen and (max-width: 1024px) {
+  .blog {
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-areas: "uno" "dos" "noticias"; } }

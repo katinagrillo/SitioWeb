@@ -51,6 +51,13 @@ header {
         width: $ancho;
         text-align: center;
 
+        h1 {
+            span {
+                font-size: medium;
+                font-style: italic;
+            }
+        }
+
         .CTA {
             background-color: #B68C2B ;
             color: #ffffff;
@@ -89,7 +96,21 @@ main {
                 font-size: 30px;
             }
         }
-        
+
+        .inicio {
+            width: 100%;
+            max-height: 500px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            align-content: flex-start;
+            margin-top: 2rem;
+            display: grid;
+    
+            grid-template-areas: 
+            "parrafo foto"
+            "CTA foto";
+        }
     }
 
     .beneficios {
@@ -104,6 +125,10 @@ main {
     }
 
 }
+
+.parrafo {grid-area: parrafo;}
+.carousel slide {grid-area: foto;}
+.CTA {grid-area: CTA;}
 
 
 // estilos productos shop
@@ -404,4 +429,18 @@ footer {
         }
     }
 
+}
+
+
+@media screen and (max-width: 1024px) {
+    .blog {
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        
+        grid-template-areas: 
+        "uno"
+        "dos"
+        "noticias";
+       }
+       
 }
